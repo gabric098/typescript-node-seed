@@ -1,9 +1,11 @@
-import data from "../lib/data";
+import {  isVowel } from "../lib/printer";
 
 import { assert } from "chai";
 
-describe("a test", function () {
-  it("should work", function () {
-    assert.equal(data, "TEH DATA");
+describe("isVowel", function(){
+  it("should find out if char is a vowel", function(){
+    assert.equal(isVowel("a"), true);
+    assert.equal(isVowel("b"), false);
+    assert.equal(isVowel("u"), true);
   });
-});
+})
